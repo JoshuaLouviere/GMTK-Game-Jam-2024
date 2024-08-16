@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdjwhqute73cl"]
+
+[ext_resource type="Script" path="res://Scenes/Playermovement.gd" id="1_t3y0u"]
+[ext_resource type="Texture2D" uid="uid://ctqoov6lo38m0" path="res://icon.svg" id="1_vu0jn"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s6jn1"]
+resource_local_to_scene = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urpmo"]
+size = Vector2(220, 97)
+
+[node name="Playercar" type="Node2D"]
+
+[node name="LaneOne" type="Node2D" parent="."]
+position = Vector2(3, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="LaneOne"]
+scale = Vector2(434.238, 134.284)
+texture = SubResource("PlaceholderTexture2D_s6jn1")
+centered = false
+
+[node name="LaneTwo" type="Node2D" parent="."]
+position = Vector2(0, 192)
+
+[node name="Sprite2D" type="Sprite2D" parent="LaneTwo"]
+scale = Vector2(434.238, 134.284)
+texture = SubResource("PlaceholderTexture2D_s6jn1")
+centered = false
+
+[node name="LaneThree" type="Node2D" parent="."]
+position = Vector2(0, 356)
+
+[node name="Sprite2D" type="Sprite2D" parent="LaneThree"]
+scale = Vector2(434.238, 134.284)
+texture = SubResource("PlaceholderTexture2D_s6jn1")
+centered = false
+
+[node name="LaneFour" type="Node2D" parent="."]
+position = Vector2(1, 508)
+
+[node name="Sprite2D" type="Sprite2D" parent="LaneFour"]
+scale = Vector2(435.238, 134.284)
+texture = SubResource("PlaceholderTexture2D_s6jn1")
+centered = false
+
+[node name="PlayerCar" type="CharacterBody2D" parent="."]
+position = Vector2(0, 356)
+script = ExtResource("1_t3y0u")
+
+[node name="Icon" type="Sprite2D" parent="PlayerCar"]
+scale = Vector2(1.70313, 0.765625)
+texture = ExtResource("1_vu0jn")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCar"]
+position = Vector2(110, 49)
+shape = SubResource("RectangleShape2D_urpmo")
