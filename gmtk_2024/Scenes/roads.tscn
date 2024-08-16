@@ -1,3 +1,174 @@
-[gd_scene format=3 uid="uid://c70lfuowgpsjs"]
+[gd_scene load_steps=3 format=3 uid="uid://c70lfuowgpsjs"]
+
+[ext_resource type="Script" path="res://Scenes/roads.gd" id="1_0rhxj"]
+[ext_resource type="Texture2D" uid="uid://2guurfqerrkx" path="res://Assets/RoadTemp.jpg" id="1_nukhu"]
 
 [node name="Roads" type="Node2D"]
+script = ExtResource("1_0rhxj")
+
+[node name="Road" type="Node2D" parent="."]
+scale = Vector2(1.67, 0.56)
+
+[node name="RoadTemp" type="Sprite2D" parent="Road"]
+position = Vector2(87, 145)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp2" type="Sprite2D" parent="Road"]
+position = Vector2(87, 435)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp3" type="Sprite2D" parent="Road"]
+position = Vector2(87, 725)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp4" type="Sprite2D" parent="Road"]
+position = Vector2(87, 1015)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="Road2" type="Node2D" parent="."]
+position = Vector2(290, 0)
+scale = Vector2(1.67, 0.56)
+
+[node name="RoadTemp" type="Sprite2D" parent="Road2"]
+position = Vector2(87, 145)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp2" type="Sprite2D" parent="Road2"]
+position = Vector2(87, 435)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp3" type="Sprite2D" parent="Road2"]
+position = Vector2(87, 725)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp4" type="Sprite2D" parent="Road2"]
+position = Vector2(87, 1015)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="Road3" type="Node2D" parent="."]
+position = Vector2(581, 0)
+scale = Vector2(1.67, 0.56)
+
+[node name="RoadTemp" type="Sprite2D" parent="Road3"]
+position = Vector2(87, 145)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp2" type="Sprite2D" parent="Road3"]
+position = Vector2(87, 435)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp3" type="Sprite2D" parent="Road3"]
+position = Vector2(87, 725)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp4" type="Sprite2D" parent="Road3"]
+position = Vector2(87, 1015)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="Road4" type="Node2D" parent="."]
+position = Vector2(579, 0)
+scale = Vector2(1.67, 0.56)
+
+[node name="RoadTemp" type="Sprite2D" parent="Road4"]
+position = Vector2(87, 145)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp2" type="Sprite2D" parent="Road4"]
+position = Vector2(87, 435)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp3" type="Sprite2D" parent="Road4"]
+position = Vector2(87, 725)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp4" type="Sprite2D" parent="Road4"]
+position = Vector2(87, 1015)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="Road5" type="Node2D" parent="."]
+position = Vector2(870, 0)
+scale = Vector2(1.67, 0.56)
+
+[node name="RoadTemp" type="Sprite2D" parent="Road5"]
+position = Vector2(87, 145)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp2" type="Sprite2D" parent="Road5"]
+position = Vector2(87, 435)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp3" type="Sprite2D" parent="Road5"]
+position = Vector2(87, 725)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp4" type="Sprite2D" parent="Road5"]
+position = Vector2(87, 1015)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="Road6" type="Node2D" parent="."]
+position = Vector2(1160, 0)
+scale = Vector2(1.67, 0.56)
+
+[node name="RoadTemp" type="Sprite2D" parent="Road6"]
+position = Vector2(87, 145)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp2" type="Sprite2D" parent="Road6"]
+position = Vector2(87, 435)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp3" type="Sprite2D" parent="Road6"]
+position = Vector2(87, 725)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp4" type="Sprite2D" parent="Road6"]
+position = Vector2(87, 1015)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="Road7" type="Node2D" parent="."]
+position = Vector2(1450, 0)
+scale = Vector2(1.67, 0.56)
+
+[node name="RoadTemp" type="Sprite2D" parent="Road7"]
+position = Vector2(87, 145)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp2" type="Sprite2D" parent="Road7"]
+position = Vector2(87, 435)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp3" type="Sprite2D" parent="Road7"]
+position = Vector2(87, 725)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp4" type="Sprite2D" parent="Road7"]
+position = Vector2(87, 1015)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
