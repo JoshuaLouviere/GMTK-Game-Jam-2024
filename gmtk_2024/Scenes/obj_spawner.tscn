@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://3ylljy7whdnp"]
+
+[ext_resource type="Script" path="res://Scripts/obj_spawner.gd" id="1_h12o2"]
+
+[node name="ObjSpawner" type="Node2D"]
+script = ExtResource("1_h12o2")
+
+[node name="Positions" type="Node2D" parent="."]
+
+[node name="1" type="Node2D" parent="Positions"]
+position = Vector2(1270, 76)
+
+[node name="2" type="Node2D" parent="Positions"]
+position = Vector2(1270, 246)
+
+[node name="3" type="Node2D" parent="Positions"]
+position = Vector2(1270, 408)
+
+[node name="4" type="Node2D" parent="Positions"]
+position = Vector2(1270, 571)

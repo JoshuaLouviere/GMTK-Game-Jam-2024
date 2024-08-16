@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgnbuktf6p54n"]
+
+[ext_resource type="Script" path="res://Scripts/obj_movement.gd" id="1_aaqei"]
+[ext_resource type="Texture2D" uid="uid://d6x1ysntrn4f" path="res://Assets/GrandmaTemp.png" id="2_wsq07"]
+
+[node name="Grandma" type="Node2D"]
+position = Vector2(1240, 79)
+script = ExtResource("1_aaqei")
+
+[node name="Creepy-granny-character3-d-model-omznnmoo0Bmqub13" type="Sprite2D" parent="."]
+scale = Vector2(0.0250002, 0.025)
+texture = ExtResource("2_wsq07")

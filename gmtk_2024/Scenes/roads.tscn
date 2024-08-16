@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c70lfuowgpsjs"]
 
-[ext_resource type="Script" path="res://Scenes/roads.gd" id="1_0rhxj"]
+[ext_resource type="Script" path="res://Scripts/roads.gd" id="1_0rhxj"]
 [ext_resource type="Texture2D" uid="uid://2guurfqerrkx" path="res://Assets/RoadTemp.jpg" id="1_nukhu"]
 
 [node name="Roads" type="Node2D"]
