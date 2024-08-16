@@ -12,6 +12,7 @@ size = Vector2(220, 97)
 [node name="Playercar" type="Node2D"]
 
 [node name="LaneOne" type="Node2D" parent="."]
+visible = false
 position = Vector2(3, 36)
 
 [node name="Sprite2D" type="Sprite2D" parent="LaneOne"]
@@ -20,6 +21,7 @@ texture = SubResource("PlaceholderTexture2D_s6jn1")
 centered = false
 
 [node name="LaneTwo" type="Node2D" parent="."]
+visible = false
 position = Vector2(0, 192)
 
 [node name="Sprite2D" type="Sprite2D" parent="LaneTwo"]
@@ -28,6 +30,7 @@ texture = SubResource("PlaceholderTexture2D_s6jn1")
 centered = false
 
 [node name="LaneThree" type="Node2D" parent="."]
+visible = false
 position = Vector2(0, 356)
 
 [node name="Sprite2D" type="Sprite2D" parent="LaneThree"]
@@ -36,6 +39,7 @@ texture = SubResource("PlaceholderTexture2D_s6jn1")
 centered = false
 
 [node name="LaneFour" type="Node2D" parent="."]
+visible = false
 position = Vector2(1, 508)
 
 [node name="Sprite2D" type="Sprite2D" parent="LaneFour"]

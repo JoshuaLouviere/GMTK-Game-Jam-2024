@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhvohxldivdmw"]
+
+[ext_resource type="PackedScene" uid="uid://c70lfuowgpsjs" path="res://Scenes/roads.tscn" id="1_kqwtw"]
+[ext_resource type="PackedScene" uid="uid://bdjwhqute73cl" path="res://Scenes/playercar.tscn" id="2_u23qv"]
+
+[node name="test" type="Node2D"]
+
+[node name="Roads" parent="." instance=ExtResource("1_kqwtw")]
+
+[node name="Playercar" parent="." instance=ExtResource("2_u23qv")]
