@@ -1,12 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfw68j6hw1hvk"]
+[gd_scene load_steps=6 format=3 uid="uid://b6fmmhhg5bqb4"]
 
-[ext_resource type="Script" path="res://Scripts/obj_movement.gd" id="1_wqmcr"]
+[ext_resource type="Script" path="res://Scripts/baby.gd" id="1_nbswv"]
 [ext_resource type="Texture2D" uid="uid://rw7ye2dqage" path="res://Assets/BabyTemp.png" id="2_xckkl"]
+[ext_resource type="Texture2D" uid="uid://ch8nwlgonp27g" path="res://Assets/red-splatter-2.png" id="3_iqjlr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6k1m5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xckkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iqjlr")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lit0j"]
+size = Vector2(64.5, 106)
 
 [node name="Baby" type="Node2D"]
 position = Vector2(659, 240)
-script = ExtResource("1_wqmcr")
+script = ExtResource("1_nbswv")
 
-[node name="BabyTemp" type="Sprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.0413182, 0.0413182)
-texture = ExtResource("2_xckkl")
+sprite_frames = SubResource("SpriteFrames_6k1m5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(6.75, 3)
+shape = SubResource("RectangleShape2D_lit0j")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

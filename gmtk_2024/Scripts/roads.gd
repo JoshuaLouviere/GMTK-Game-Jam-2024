@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var road = get_children()
 @export var velocity = 300
+@export var terminalVelocity = 900
+@export var acceleration = 50
 @export var debugging = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,6 +16,8 @@ func _process(delta):
 		
 		if (velocity <= 0):
 			velocity = 0
+	elif velocity <= terminalVelocity:
+		velocity += acceleration * delta
 	
 	for i in get_children():
 		i.global_position.x -= velocity * delta

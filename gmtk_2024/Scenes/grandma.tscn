@@ -1,12 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgnbuktf6p54n"]
+[gd_scene load_steps=6 format=3 uid="uid://cgnbuktf6p54n"]
 
 [ext_resource type="Script" path="res://Scripts/obj_movement.gd" id="1_aaqei"]
 [ext_resource type="Texture2D" uid="uid://d6x1ysntrn4f" path="res://Assets/GrandmaTemp.png" id="2_wsq07"]
+[ext_resource type="Texture2D" uid="uid://ch8nwlgonp27g" path="res://Assets/red-splatter-2.png" id="3_dfoou"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1sble"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wsq07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dfoou")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjfp4"]
+size = Vector2(57, 80)
 
 [node name="Grandma" type="Node2D"]
 position = Vector2(1240, 79)
 script = ExtResource("1_aaqei")
 
-[node name="Creepy-granny-character3-d-model-omznnmoo0Bmqub13" type="Sprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.0250002, 0.025)
-texture = ExtResource("2_wsq07")
+sprite_frames = SubResource("SpriteFrames_1sble")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3.5, 1)
+shape = SubResource("RectangleShape2D_sjfp4")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

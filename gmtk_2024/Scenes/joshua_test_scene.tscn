@@ -1,28 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://dy0orpb4i458m"]
 
 [ext_resource type="PackedScene" uid="uid://c70lfuowgpsjs" path="res://Scenes/roads.tscn" id="1_2x6it"]
-[ext_resource type="Script" path="res://Scripts/obj_spawner.gd" id="2_xbak8"]
+[ext_resource type="PackedScene" uid="uid://3ylljy7whdnp" path="res://Scenes/obj_spawner.tscn" id="2_dp0fu"]
 [ext_resource type="PackedScene" uid="uid://cb0k6dbc6hxk7" path="res://Scenes/playercar.tscn" id="3_ugf0r"]
 
 [node name="JoshuaTestScene" type="Node2D"]
 
 [node name="Roads" parent="." instance=ExtResource("1_2x6it")]
+debugging = false
 
-[node name="ObjSpawner" type="Node2D" parent="."]
-script = ExtResource("2_xbak8")
-
-[node name="Positions" type="Node2D" parent="ObjSpawner"]
-
-[node name="1" type="Node2D" parent="ObjSpawner/Positions"]
-position = Vector2(1270, 76)
-
-[node name="2" type="Node2D" parent="ObjSpawner/Positions"]
-position = Vector2(1270, 246)
-
-[node name="3" type="Node2D" parent="ObjSpawner/Positions"]
-position = Vector2(1270, 408)
-
-[node name="4" type="Node2D" parent="ObjSpawner/Positions"]
-position = Vector2(1270, 571)
+[node name="ObjSpawner" parent="." instance=ExtResource("2_dp0fu")]
 
 [node name="Playercar" parent="." instance=ExtResource("3_ugf0r")]
+position = Vector2(160, 0)
