@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy0orpb4i458m"]
+[gd_scene load_steps=4 format=3 uid="uid://bl1rgy1oekfct"]
 
 [ext_resource type="PackedScene" uid="uid://c70lfuowgpsjs" path="res://Scenes/roads.tscn" id="1_2x6it"]
-[ext_resource type="PackedScene" uid="uid://3ylljy7whdnp" path="res://Scenes/obj_spawner.tscn" id="2_dp0fu"]
-[ext_resource type="PackedScene" uid="uid://cb0k6dbc6hxk7" path="res://Scenes/playercar.tscn" id="3_ugf0r"]
+[ext_resource type="PackedScene" path="res://Scenes/obj_spawner.tscn" id="2_dp0fu"]
+[ext_resource type="PackedScene" uid="uid://bdjwhqute73cl" path="res://Scenes/playercar.tscn" id="3_ugf0r"]
 
 [node name="JoshuaTestScene" type="Node2D"]
 

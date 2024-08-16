@@ -40,7 +40,7 @@ centered = false
 
 [node name="LaneFour" type="Node2D" parent="."]
 visible = false
-position = Vector2(1, 508)
+position = Vector2(1, 525)
 
 [node name="Sprite2D" type="Sprite2D" parent="LaneFour"]
 scale = Vector2(435.238, 134.284)
