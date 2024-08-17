@@ -1,8 +1,9 @@
 extends Node2D
 
 var timer = 2
-var time = 2
+@export var time = 2.0
 var babyChance = 30
+var active = true
 
 @onready var positions = $Positions.get_children()
 const GRANDMA = preload("res://Scenes/grandma.tscn")
@@ -28,14 +29,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	timer -= delta
-	
-	if timer <= 0:
-		var pos = rng.randi_range(0, positions.size()-1)
-		var chance = rng.randf() * 100
-		if (chance <= babyChance):
-			spawnBaby(pos)
-		else:
-			spawnGranny(pos)
+	if (active):
+		timer -= delta
+		
+		if timer <= 0:
+			var pos = rng.randi_range(0, positions.size()-1)
+			var chance = rng.randf() * 100
+			if (chance <= babyChance):
+				spawnBaby(pos)
+			else:
+				spawnGranny(pos)
 
-		timer = time
+			timer = time
