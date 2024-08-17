@@ -3,6 +3,9 @@ extends Node2D
 @export var road : Node2D
 @onready var sprite = $Sprite
 
+
+@export var BatterySubtraction = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if road == null:
@@ -20,3 +23,4 @@ func _on_area_2d_body_entered(body):
 		print("OH NO")
 		road.slowDown()
 		sprite.frame = 1
+		$"../Battery Control".batteryWrongHit(BatterySubtraction)

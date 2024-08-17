@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy0orpb4i458m"]
+[gd_scene load_steps=6 format=3 uid="uid://bl1rgy1oekfct"]
 
 [ext_resource type="PackedScene" uid="uid://c70lfuowgpsjs" path="res://Scenes/roads.tscn" id="1_2x6it"]
-[ext_resource type="PackedScene" uid="uid://3ylljy7whdnp" path="res://Scenes/obj_spawner.tscn" id="2_dp0fu"]
+[ext_resource type="PackedScene" path="res://Scenes/obj_spawner.tscn" id="2_dp0fu"]
 [ext_resource type="PackedScene" uid="uid://bdjwhqute73cl" path="res://Scenes/playercar.tscn" id="3_ugf0r"]
 [ext_resource type="Script" path="res://Scripts/granny_count.gd" id="4_eyqw6"]
+[ext_resource type="PackedScene" uid="uid://cndysnnaq4vno" path="res://Scenes/Battery.tscn" id="5_ewvlg"]
 
 [node name="JoshuaTestScene" type="Node2D"]
 
@@ -30,3 +31,7 @@ offset_right = 420.0
 offset_bottom = 619.0
 theme_override_font_sizes/font_size = 46
 text = "fs"
+
+[node name="Battery Control" parent="." instance=ExtResource("5_ewvlg")]
+offset_top = 585.0
+offset_bottom = 585.0

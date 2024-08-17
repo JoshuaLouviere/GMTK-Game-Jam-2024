@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6fmmhhg5bqb4"]
+[gd_scene load_steps=6 format=3 uid="uid://drisigx1rs4ea"]
 
 [ext_resource type="Script" path="res://Scripts/baby.gd" id="1_nbswv"]
 [ext_resource type="Texture2D" uid="uid://rw7ye2dqage" path="res://Assets/BabyTemp.png" id="2_xckkl"]
@@ -24,6 +24,7 @@ size = Vector2(64.5, 106)
 [node name="Baby" type="Node2D"]
 position = Vector2(659, 240)
 script = ExtResource("1_nbswv")
+BatterySubtraction = 5
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.0413182, 0.0413182)
