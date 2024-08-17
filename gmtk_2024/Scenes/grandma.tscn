@@ -29,10 +29,11 @@ script = ExtResource("1_aaqei")
 scale = Vector2(0.0250002, 0.025)
 sprite_frames = SubResource("SpriteFrames_1sble")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Granny" type="Area2D" parent="."]
+z_index = 55
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Granny"]
 position = Vector2(3.5, 1)
 shape = SubResource("RectangleShape2D_sjfp4")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Granny" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://jp1hnlauth11"]
+
+[ext_resource type="Script" path="res://Scenes/charging_station.gd" id="1_4rx4o"]
+[ext_resource type="Texture2D" uid="uid://ctqoov6lo38m0" path="res://Assets/icon.svg" id="2_tmgmb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w230o"]
+size = Vector2(128.422, 154)
+
+[node name="ChargingStation" type="Node2D"]
+position = Vector2(1567, 571)
+script = ExtResource("1_4rx4o")
+
+[node name="Charger" type="Area2D" parent="."]
+position = Vector2(543, 0)
+scale = Vector2(9.48437, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Charger"]
+position = Vector2(-0.105438, -1)
+shape = SubResource("RectangleShape2D_w230o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(543, 0)
+scale = Vector2(9.48437, 1.14063)
+texture = ExtResource("2_tmgmb")
+
+[connection signal="body_entered" from="Charger" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Charger" to="." method="_on_charger_body_exited"]

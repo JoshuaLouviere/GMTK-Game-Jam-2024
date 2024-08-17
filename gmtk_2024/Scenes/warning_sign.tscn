@@ -1,17 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgwklc268p4lw"]
+[gd_scene load_steps=5 format=3 uid="uid://cgwklc268p4lw"]
 
 [ext_resource type="Script" path="res://Scripts/warning.gd" id="1_jvqka"]
 [ext_resource type="Texture2D" uid="uid://d6x1ysntrn4f" path="res://Assets/GrandmaTemp.png" id="2_br8eg"]
 [ext_resource type="Texture2D" uid="uid://rw7ye2dqage" path="res://Assets/BabyTemp.png" id="3_dklao"]
+[ext_resource type="Texture2D" uid="uid://83ba4c8abs8f" path="res://Assets/ScrewAttack_blue_bolt.png" id="4_q2fyi"]
 
 [node name="WarningSign" type="Node2D"]
 position = Vector2(1043, 76)
 script = ExtResource("1_jvqka")
 
 [node name="GrandmaSprite" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.05875, 0.05875)
 texture = ExtResource("2_br8eg")
 
 [node name="BabySprite" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.0777177, 0.0777177)
 texture = ExtResource("3_dklao")
+
+[node name="ChargeSprite" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("4_q2fyi")

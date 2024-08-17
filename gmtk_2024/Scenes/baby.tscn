@@ -22,18 +22,19 @@ animations = [{
 size = Vector2(64.5, 106)
 
 [node name="Baby" type="Node2D"]
+z_index = 55
 position = Vector2(659, 240)
 script = ExtResource("1_nbswv")
-BatterySubtraction = 5
+BatterySubtraction = 15
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.0413182, 0.0413182)
 sprite_frames = SubResource("SpriteFrames_6k1m5")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Baby" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Baby"]
 position = Vector2(6.75, 3)
 shape = SubResource("RectangleShape2D_lit0j")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Baby" to="." method="_on_area_2d_body_entered"]

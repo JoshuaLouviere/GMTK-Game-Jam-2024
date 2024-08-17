@@ -1,5 +1,7 @@
 extends Control
 
+@export var rate = 0.01
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
@@ -14,7 +16,7 @@ func _ready() -> void:
 	
 
 func _on_timer_timeout() -> void:
-	$ProgressBar.value -= 0.01
+	$ProgressBar.value -= rate
 	
 
 func batteryWrongHit(batterydebt):

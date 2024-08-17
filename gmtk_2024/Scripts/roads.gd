@@ -6,6 +6,7 @@ extends Node2D
 @export var acceleration = 50
 @export var debugging = true
 @onready var obj_spawner = $"../ObjSpawner"
+@onready var battery_control = $"../Battery Control".get_child(0)
 
 var lose = false
 var sTimer = 0
@@ -19,9 +20,6 @@ func slowDown():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if (Input.is_action_just_pressed("ui_accept")):
-		lose = !lose
-	
 	if (debugging):
 		if (Input.is_action_pressed("ui_accept")):
 			velocity += delta * 89
@@ -38,6 +36,9 @@ func _process(delta):
 	elif lose && velocity > 0:
 		velocity -= delta * 550
 		obj_spawner.active = false
+	
+	if (battery_control.value <= 0):
+		lose = true
 	
 	if (velocity <= 0):
 		velocity = 0

@@ -5,8 +5,6 @@ extends CharacterBody2D
 @onready var LaneThreePos = $"../LaneThree".position
 @onready var LaneFourPos = $"../LaneFour".position
 
-
-
 func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_up"):
