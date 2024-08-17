@@ -6,6 +6,16 @@ extends Node2D
 @export var acceleration = 50
 @export var debugging = true
 
+
+var sTimer = 0
+var sTime = 0.2
+var reduceSpeed = 350
+
+func slowDown():
+	sTimer = sTime
+	if (velocity >= reduceSpeed):
+		velocity -= reduceSpeed
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if (debugging):
@@ -17,7 +27,11 @@ func _process(delta):
 		if (velocity <= 0):
 			velocity = 0
 	elif velocity <= terminalVelocity:
-		velocity += acceleration * delta
+		sTimer -= delta
+		if (sTimer > 0):
+			velocity -= acceleration * delta
+		else:
+			velocity += acceleration * delta
 	
 	for i in get_children():
 		i.global_position.x -= velocity * delta

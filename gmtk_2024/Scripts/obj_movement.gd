@@ -18,4 +18,5 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	if (body.name == "PlayerCar"):
 		sprite.frame = 1
+		$"../GrannyCount".count += 1
 		print("FUCK YEAH")

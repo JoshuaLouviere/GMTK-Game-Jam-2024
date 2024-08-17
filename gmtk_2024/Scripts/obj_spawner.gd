@@ -13,11 +13,13 @@ func spawnGranny(pos):
 	var obj = GRANDMA.instantiate()
 	add_sibling(obj)
 	obj.position = positions[pos].position
+	positions[pos].get_child(0).flash(0)
 
 func spawnBaby(pos):
 	var obj = BABY.instantiate()
 	add_sibling(obj)
 	obj.position = positions[pos].position
+	positions[pos].get_child(0).flash(1)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

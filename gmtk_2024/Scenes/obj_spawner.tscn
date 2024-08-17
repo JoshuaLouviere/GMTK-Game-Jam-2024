@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://3ylljy7whdnp"]
+[gd_scene load_steps=3 format=3 uid="uid://3ylljy7whdnp"]
 
 [ext_resource type="Script" path="res://Scripts/obj_spawner.gd" id="1_h12o2"]
+[ext_resource type="PackedScene" uid="uid://cgwklc268p4lw" path="res://Scenes/warning_sign.tscn" id="2_7itpx"]
 
 [node name="ObjSpawner" type="Node2D"]
 script = ExtResource("1_h12o2")
@@ -8,13 +9,25 @@ script = ExtResource("1_h12o2")
 [node name="Positions" type="Node2D" parent="."]
 
 [node name="1" type="Node2D" parent="Positions"]
-position = Vector2(1270, 76)
+position = Vector2(1613, 76)
+
+[node name="WarningSign" parent="Positions/1" instance=ExtResource("2_7itpx")]
+position = Vector2(-567, 0)
 
 [node name="2" type="Node2D" parent="Positions"]
-position = Vector2(1270, 246)
+position = Vector2(1613, 246)
+
+[node name="WarningSign" parent="Positions/2" instance=ExtResource("2_7itpx")]
+position = Vector2(-567, 0)
 
 [node name="3" type="Node2D" parent="Positions"]
-position = Vector2(1270, 408)
+position = Vector2(1613, 408)
+
+[node name="WarningSign" parent="Positions/3" instance=ExtResource("2_7itpx")]
+position = Vector2(-567, 0)
 
 [node name="4" type="Node2D" parent="Positions"]
-position = Vector2(1270, 571)
+position = Vector2(1613, 571)
+
+[node name="WarningSign" parent="Positions/4" instance=ExtResource("2_7itpx")]
+position = Vector2(-567, 0)
