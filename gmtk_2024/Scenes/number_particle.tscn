@@ -27,19 +27,22 @@ viewport_path = NodePath("SubViewport")
 
 [node name="NumberParticle" type="GPUParticles2D"]
 position = Vector2(199, 58)
+emitting = false
 amount = 1
 process_material = SubResource("ParticleProcessMaterial_3us3f")
 texture = SubResource("ViewportTexture_g5cs1")
 lifetime = 2.0
+one_shot = true
 speed_scale = 2.29
 
 [node name="SubViewport" type="SubViewport" parent="."]
-size = Vector2i(40, 40)
+transparent_bg = true
+size = Vector2i(55, 77)
 
 [node name="Label" type="Label" parent="SubViewport"]
 offset_right = 40.0
 offset_bottom = 23.0
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 48
 text = "+1"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -51,11 +51,11 @@ centered = false
 position = Vector2(0, 356)
 script = ExtResource("1_t3y0u")
 
-[node name="Icon" type="Sprite2D" parent="PlayerCar"]
-scale = Vector2(1.70313, 0.765625)
-texture = ExtResource("1_vu0jn")
-centered = false
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCar"]
 position = Vector2(110, 49)
 shape = SubResource("RectangleShape2D_urpmo")
+
+[node name="Icon" type="Sprite2D" parent="PlayerCar"]
+position = Vector2(110, 49)
+scale = Vector2(1.70313, 0.765625)
+texture = ExtResource("1_vu0jn")

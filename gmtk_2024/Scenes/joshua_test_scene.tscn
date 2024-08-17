@@ -20,7 +20,7 @@ z_index = 110
 time = 1.0
 
 [node name="Playercar" parent="." instance=ExtResource("3_ugf0r")]
-z_index = 35
+z_index = 365
 position = Vector2(160, 0)
 
 [node name="GrannyCount" type="Control" parent="."]
@@ -39,6 +39,9 @@ offset_bottom = 94.0
 theme_override_font_sizes/font_size = 46
 text = "Grandma Count: 00/53           000"
 metadata/_edit_use_anchors_ = true
+
+[node name="ParticleSpot" type="Node2D" parent="GrannyCount"]
+position = Vector2(408, 63)
 
 [node name="Battery Control" parent="." instance=ExtResource("5_ewvlg")]
 z_index = 65
