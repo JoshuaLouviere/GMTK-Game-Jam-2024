@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dy0orpb4i458m"]
+[gd_scene load_steps=14 format=3 uid="uid://dy0orpb4i458m"]
 
 [ext_resource type="PackedScene" uid="uid://c70lfuowgpsjs" path="res://Scenes/roads.tscn" id="1_2x6it"]
 [ext_resource type="PackedScene" uid="uid://3ylljy7whdnp" path="res://Scenes/obj_spawner.tscn" id="2_dp0fu"]
@@ -7,23 +7,42 @@
 [ext_resource type="PackedScene" uid="uid://cndysnnaq4vno" path="res://Scenes/Battery.tscn" id="5_ewvlg"]
 [ext_resource type="PackedScene" uid="uid://c3mc8brrpgys7" path="res://Scenes/clearer.tscn" id="6_k7ljx"]
 [ext_resource type="PackedScene" uid="uid://jp1hnlauth11" path="res://Scenes/charging_station.tscn" id="7_k0ekp"]
+[ext_resource type="Script" path="res://Scripts/jar.gd" id="8_10ucj"]
+[ext_resource type="Script" path="res://Scenes/spedometer.gd" id="9_w6c3b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_joabe"]
+size = Vector2(274.001, 24.4987)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8uo2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xngrs"]
+bg_color = Color(0.296329, 0.600302, 1, 1)
+
+[sub_resource type="Theme" id="Theme_0sp5e"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_o8uo2")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_xngrs")
 
 [node name="JoshuaTestScene" type="Node2D"]
 
-[node name="Roads" parent="." instance=ExtResource("1_2x6it")]
+[node name="GameScene" type="Node2D" parent="."]
+position = Vector2(0, 109)
+scale = Vector2(0.73, 0.73)
+
+[node name="Roads" parent="GameScene" instance=ExtResource("1_2x6it")]
 terminalVelocity = 1500
 acceleration = 95
 debugging = false
 
-[node name="ObjSpawner" parent="." instance=ExtResource("2_dp0fu")]
+[node name="ObjSpawner" parent="GameScene" instance=ExtResource("2_dp0fu")]
 z_index = 110
 time = 1.0
 
-[node name="Playercar" parent="." instance=ExtResource("3_ugf0r")]
+[node name="Playercar" parent="GameScene" instance=ExtResource("3_ugf0r")]
 z_index = 365
 position = Vector2(160, 0)
 
-[node name="GrannyCount" type="Control" parent="."]
+[node name="GrannyCount" type="Control" parent="GameScene"]
+z_index = 2315
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -31,27 +50,85 @@ offset_bottom = 40.0
 script = ExtResource("4_eyqw6")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="GrannyCount"]
-layout_mode = 0
+[node name="Label" type="Label" parent="GameScene/GrannyCount"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 31.8027
+anchor_top = -2.95
+anchor_right = 31.8027
+anchor_bottom = -2.95
 offset_left = 2.0
 offset_right = 382.0
 offset_bottom = 94.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 46
-text = "Grandma Count: 00/53           000"
+text = "00/299"
 metadata/_edit_use_anchors_ = true
 
-[node name="ParticleSpot" type="Node2D" parent="GrannyCount"]
-position = Vector2(408, 63)
+[node name="ParticleSpot" type="Node2D" parent="GameScene/GrannyCount"]
+position = Vector2(1298.63, -57.5343)
 
-[node name="Battery Control" parent="." instance=ExtResource("5_ewvlg")]
+[node name="Battery Control" parent="GameScene" instance=ExtResource("5_ewvlg")]
 z_index = 65
-offset_top = 585.0
-offset_bottom = 585.0
+offset_left = 39.726
+offset_top = -117.808
+offset_right = 39.726
+offset_bottom = -117.808
+scale = Vector2(2.26027, 1.43836)
 rate = 0.02
 metadata/_edit_use_anchors_ = true
 
-[node name="Clearer" parent="." instance=ExtResource("6_k7ljx")]
+[node name="Clearer" parent="GameScene" instance=ExtResource("6_k7ljx")]
 
-[node name="ChargingStation" parent="." instance=ExtResource("7_k0ekp")]
+[node name="ChargingStation" parent="GameScene" instance=ExtResource("7_k0ekp")]
 z_index = 10
 rate = 225
+
+[node name="Jar" type="Node2D" parent="GameScene"]
+position = Vector2(1187.67, -149.315)
+scale = Vector2(1.36986, 1.36986)
+script = ExtResource("8_10ucj")
+
+[node name="ColorRect3" type="ColorRect" parent="GameScene/Jar"]
+z_index = 290
+offset_right = 287.0
+offset_bottom = 648.0
+
+[node name="FlyTo" type="Node2D" parent="GameScene/Jar"]
+position = Vector2(-30.9999, -684)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GameScene/Jar"]
+z_index = 4040
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameScene/Jar/StaticBody2D"]
+position = Vector2(144.001, 631.251)
+shape = SubResource("RectangleShape2D_joabe")
+
+[node name="SpawnHere" type="Node2D" parent="GameScene/Jar"]
+position = Vector2(115, -246)
+
+[node name="Spedometer" type="ProgressBar" parent="GameScene" node_paths=PackedStringArray("road")]
+z_index = 320
+offset_left = 14.0
+offset_top = 666.0
+offset_right = 1175.0
+offset_bottom = 723.0
+theme = SubResource("Theme_0sp5e")
+show_percentage = false
+script = ExtResource("9_w6c3b")
+road = NodePath("../Roads")
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+offset_right = 1152.0
+offset_bottom = 110.0
+color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="UI"]
+offset_top = 583.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.529067, 0.529067, 0.529067, 1)

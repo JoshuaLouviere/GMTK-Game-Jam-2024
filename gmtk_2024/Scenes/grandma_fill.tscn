@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://o1bi6wemxam7"]
+
+[ext_resource type="Script" path="res://Scripts/grandma_fill.gd" id="1_vjn5c"]
+[ext_resource type="Texture2D" uid="uid://dp2m5oy5axxfk" path="res://Assets/GrandmaFallen.png" id="2_yc6o6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggim1"]
+size = Vector2(102, 6)
+
+[node name="GrandmaFill" type="CharacterBody2D"]
+z_index = 1380
+position = Vector2(74.0001, -25)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_vjn5c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(41, -6)
+shape = SubResource("RectangleShape2D_ggim1")
+one_way_collision = true
+
+[node name="GrandmaFallen" type="Sprite2D" parent="."]
+position = Vector2(76.9999, 3.8147e-06)
+rotation = -1.309
+scale = Vector2(0.0901651, 0.555017)
+texture = ExtResource("2_yc6o6")

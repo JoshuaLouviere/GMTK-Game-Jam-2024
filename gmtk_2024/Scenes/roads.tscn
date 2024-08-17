@@ -172,3 +172,27 @@ texture = ExtResource("1_nukhu")
 position = Vector2(87, 1015)
 rotation = 1.5708
 texture = ExtResource("1_nukhu")
+
+[node name="Road8" type="Node2D" parent="."]
+position = Vector2(1737, 0)
+scale = Vector2(1.67, 0.56)
+
+[node name="RoadTemp" type="Sprite2D" parent="Road8"]
+position = Vector2(87, 145)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp2" type="Sprite2D" parent="Road8"]
+position = Vector2(87, 435)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp3" type="Sprite2D" parent="Road8"]
+position = Vector2(87, 725)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")
+
+[node name="RoadTemp4" type="Sprite2D" parent="Road8"]
+position = Vector2(87, 1015)
+rotation = 1.5708
+texture = ExtResource("1_nukhu")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8s7v5brint4v"]
+
+[ext_resource type="Texture2D" uid="uid://d6x1ysntrn4f" path="res://Assets/GrandmaTemp.png" id="1_ya6g1"]
+[ext_resource type="Script" path="res://Scripts/grandma_hit.gd" id="2_bwcc8"]
+
+[node name="GrandmaHit" type="Sprite2D"]
+z_index = 1095
+position = Vector2(-590, 405)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_ya6g1")
+script = ExtResource("2_bwcc8")
+rotateSpeed = 1035
+velocity = 2

@@ -14,7 +14,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if (road):
-		position.x -= delta * road.velocity
+		position.x -= delta * road.velocity / get_parent().scale.x
 	if (charging):
 		battery_control.value += delta * (road.velocity / rate) * 0.5
 

@@ -15,7 +15,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if (road):
-		position.x -= delta * road.velocity
+		position.x -= delta * road.velocity / get_parent().scale.x
 
 
 func _on_area_2d_body_entered(body):

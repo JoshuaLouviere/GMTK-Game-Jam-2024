@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bdjwhqute73cl"]
 
-[ext_resource type="Script" path="res://Playermovement.gd" id="1_t3y0u"]
 [ext_resource type="Texture2D" uid="uid://ctqoov6lo38m0" path="res://Assets/icon.svg" id="1_vu0jn"]
+[ext_resource type="Script" path="res://Scripts/AdvancedCarMovement.gd" id="1_x8ve8"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s6jn1"]
 resource_local_to_scene = true
@@ -49,7 +49,7 @@ centered = false
 
 [node name="PlayerCar" type="CharacterBody2D" parent="."]
 position = Vector2(0, 356)
-script = ExtResource("1_t3y0u")
+script = ExtResource("1_x8ve8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCar"]
 position = Vector2(110, 49)
