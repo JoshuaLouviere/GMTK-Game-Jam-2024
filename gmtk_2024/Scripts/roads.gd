@@ -40,6 +40,9 @@ func _process(delta):
 	if (battery_control.value <= 0):
 		lose = true
 	
+	if (lose && velocity <= 0):
+		print("you Lose")
+	
 	if (velocity <= 0):
 		velocity = 0
 	

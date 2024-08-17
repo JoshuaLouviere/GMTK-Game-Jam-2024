@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dy0orpb4i458m"]
+[gd_scene load_steps=16 format=3 uid="uid://dy0orpb4i458m"]
 
 [ext_resource type="PackedScene" uid="uid://c70lfuowgpsjs" path="res://Scenes/roads.tscn" id="1_2x6it"]
 [ext_resource type="PackedScene" uid="uid://3ylljy7whdnp" path="res://Scenes/obj_spawner.tscn" id="2_dp0fu"]
@@ -8,12 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://c3mc8brrpgys7" path="res://Scenes/clearer.tscn" id="6_k7ljx"]
 [ext_resource type="PackedScene" uid="uid://jp1hnlauth11" path="res://Scenes/charging_station.tscn" id="7_k0ekp"]
 [ext_resource type="Script" path="res://Scripts/jar.gd" id="8_10ucj"]
-[ext_resource type="Script" path="res://Scenes/spedometer.gd" id="9_w6c3b"]
+[ext_resource type="Script" path="res://Scripts/spedometer.gd" id="9_w6c3b"]
+[ext_resource type="Script" path="res://Scripts/ScreenShaker.gd" id="10_shied"]
+[ext_resource type="Script" path="res://Scenes/detrement.gd" id="11_xhpsx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_joabe"]
 size = Vector2(274.001, 24.4987)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8uo2"]
+bg_color = Color(0.332881, 0.332881, 0.332881, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xngrs"]
 bg_color = Color(0.296329, 0.600302, 1, 1)
@@ -120,14 +123,33 @@ show_percentage = false
 script = ExtResource("9_w6c3b")
 road = NodePath("../Roads")
 
-[node name="UI" type="Node2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="GameScene"]
+position = Vector2(0, -147.945)
+anchor_mode = 0
 
-[node name="ColorRect" type="ColorRect" parent="UI"]
+[node name="ScreenShaker" type="Node2D" parent="GameScene" node_paths=PackedStringArray("camera")]
+position = Vector2(0, -149.315)
+scale = Vector2(1.36986, 1.36986)
+script = ExtResource("10_shied")
+camera = NodePath("../Camera2D")
+
+[node name="Detrement" type="ColorRect" parent="GameScene"]
+z_index = 110
+offset_left = 45.0
+offset_top = -112.0
+offset_right = 1145.0
+offset_bottom = -33.0
+color = Color(1, 0, 0.266667, 0.65098)
+script = ExtResource("11_xhpsx")
+
+[node name="UITemp" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="UITemp"]
 offset_right = 1152.0
 offset_bottom = 110.0
 color = Color(0.529067, 0.529067, 0.529067, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="UI"]
+[node name="ColorRect2" type="ColorRect" parent="UITemp"]
 offset_top = 583.0
 offset_right = 1152.0
 offset_bottom = 648.0

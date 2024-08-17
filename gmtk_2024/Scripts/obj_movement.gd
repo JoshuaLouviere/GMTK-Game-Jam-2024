@@ -34,4 +34,5 @@ func _on_area_2d_body_entered(body):
 		$"../GrannyCount".count += 1
 		createParticle()
 		spawnHit()
+		$"../ScreenShaker".shake(8, 0.01, 12)
 		print("FUCK YEAH")

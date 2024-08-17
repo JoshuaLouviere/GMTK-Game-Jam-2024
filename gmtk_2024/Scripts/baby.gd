@@ -24,3 +24,5 @@ func _on_area_2d_body_entered(body):
 		road.slowDown()
 		sprite.frame = 1
 		$"../Battery Control".batteryWrongHit(BatterySubtraction)
+		$"../ScreenShaker".shake(16, 0.01, 12)
+		$"../Detrement".flash()
