@@ -27,7 +27,7 @@ func _process(delta):
 	if (road):
 		position.x -= delta * road.velocity / get_parent().scale.x
 
-
+# grandma hit
 func _on_area_2d_body_entered(body):
 	if (body.name == "PlayerCar"):
 		sprite.frame = 1
@@ -35,4 +35,4 @@ func _on_area_2d_body_entered(body):
 		createParticle()
 		spawnHit()
 		$"../ScreenShaker".shake(8, 0.01, 12)
-		print("FUCK YEAH")
+		Sounds.grandmaHit()

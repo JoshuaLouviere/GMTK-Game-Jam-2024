@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dso2dk42t0bmh"]
+
+[ext_resource type="Script" path="res://Scenes/sounds.gd" id="1_1dsj3"]
+[ext_resource type="AudioStream" uid="uid://baew8i1tjpyjp" path="res://Assets/Sounds/GrannyHit0.mp3" id="1_m0awm"]
+[ext_resource type="AudioStream" uid="uid://dtfm02ke8dbdl" path="res://Assets/Sounds/GrannyHit1.mp3" id="2_rm4j1"]
+[ext_resource type="AudioStream" uid="uid://c52oyxmojrnj" path="res://Assets/Sounds/GrannyHit2.mp3" id="4_6loyd"]
+
+[node name="Sounds" type="Node2D"]
+script = ExtResource("1_1dsj3")
+
+[node name="GrandmaHits" type="Node2D" parent="."]
+
+[node name="GrannyHit0" type="AudioStreamPlayer2D" parent="GrandmaHits"]
+position = Vector2(-1, 0)
+stream = ExtResource("1_m0awm")
+
+[node name="GrannyHit1" type="AudioStreamPlayer2D" parent="GrandmaHits"]
+position = Vector2(3, -3)
+stream = ExtResource("2_rm4j1")
+volume_db = 6.933
+
+[node name="GrannyHit2" type="AudioStreamPlayer2D" parent="GrandmaHits"]
+position = Vector2(-2, -3)
+stream = ExtResource("4_6loyd")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://jp1hnlauth11"]
 
 [ext_resource type="Script" path="res://Scripts/charging_station.gd" id="1_4rx4o"]
-[ext_resource type="Texture2D" uid="uid://ctqoov6lo38m0" path="res://Assets/icon.svg" id="2_tmgmb"]
+[ext_resource type="Texture2D" uid="uid://ctqoov6lo38m0" path="res://Assets/Images/icon.svg" id="2_tmgmb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w230o"]
 size = Vector2(128.422, 154)

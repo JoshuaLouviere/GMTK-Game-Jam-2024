@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b6fmmhhg5bqb4"]
 
 [ext_resource type="Script" path="res://Scripts/baby.gd" id="1_nbswv"]
-[ext_resource type="Texture2D" uid="uid://rw7ye2dqage" path="res://Assets/BabyTemp.png" id="2_xckkl"]
-[ext_resource type="Texture2D" uid="uid://ch8nwlgonp27g" path="res://Assets/red-splatter-2.png" id="3_iqjlr"]
+[ext_resource type="Texture2D" uid="uid://rw7ye2dqage" path="res://Assets/Images/BabyTemp.png" id="2_xckkl"]
+[ext_resource type="Texture2D" uid="uid://ch8nwlgonp27g" path="res://Assets/Images/red-splatter-2.png" id="3_iqjlr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6k1m5"]
 animations = [{

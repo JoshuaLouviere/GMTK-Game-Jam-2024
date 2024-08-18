@@ -55,13 +55,23 @@ func _process(delta):
 			if timer <= 0:
 				var pos = rng.randi_range(0, positions.size()-1)
 				var pos1 = rng.randi_range(0, positions.size()-1)
-				while (pos1 == pos):
+				var pos2 = rng.randi_range(0, positions.size()-1)
+				while (pos1 == pos || pos1 == pos2):
 					pos1 = rng.randi_range(0, positions.size()-1)
+				while (pos2 == pos1 || pos2 == pos):
+					pos2 = rng.randi_range(0, positions.size()-1)
+				
 				var chance = rng.randf() * 100
+				var posa = [pos, pos1, pos2]
+				
 				if (chance <= babyChance):
-					spawnBaby(pos)
+					var a = rng.randi_range(0, positions.size() - 1)
+					for i in range(a):
+						spawnBaby(posa[i])
+						
 				else:
-					spawnGranny(pos)
-					spawnGranny(pos1)
+					var a = rng.randi_range(0, positions.size() - 2)
+					for i in range(a):
+						spawnGranny(posa[i])
 
 				timer = time

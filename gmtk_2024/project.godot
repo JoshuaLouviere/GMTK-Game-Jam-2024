@@ -13,7 +13,11 @@ config_version=5
 config/name="GMTK_2024"
 run/main_scene="res://Scenes/playercar.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://Assets/icon.svg"
+config/icon="res://Assets/Images/icon.svg"
+
+[autoload]
+
+Sounds="*res://Scenes/sounds.tscn"
 
 [display]
 

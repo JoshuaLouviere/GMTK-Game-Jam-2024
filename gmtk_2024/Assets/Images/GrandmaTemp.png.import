@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://83ba4c8abs8f"
-path="res://.godot/imported/ScrewAttack_blue_bolt.png-9062272fa7767e462d17635163de7312.ctex"
+uid="uid://d6x1ysntrn4f"
+path="res://.godot/imported/GrandmaTemp.png-d7ec0c8a548eb3be1ae44a648bce500a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ScrewAttack_blue_bolt.png"
-dest_files=["res://.godot/imported/ScrewAttack_blue_bolt.png-9062272fa7767e462d17635163de7312.ctex"]
+source_file="res://Assets/Images/GrandmaTemp.png"
+dest_files=["res://.godot/imported/GrandmaTemp.png-d7ec0c8a548eb3be1ae44a648bce500a.ctex"]
 
 [params]
 

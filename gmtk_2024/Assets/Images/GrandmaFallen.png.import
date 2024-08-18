@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch8nwlgonp27g"
-path="res://.godot/imported/red-splatter-2.png-7ee9ab5794111a74855a009a592c171c.ctex"
+uid="uid://dp2m5oy5axxfk"
+path="res://.godot/imported/GrandmaFallen.png-352b33f0ee399e578ac7b51ba6d50444.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/red-splatter-2.png"
-dest_files=["res://.godot/imported/red-splatter-2.png-7ee9ab5794111a74855a009a592c171c.ctex"]
+source_file="res://Assets/Images/GrandmaFallen.png"
+dest_files=["res://.godot/imported/GrandmaFallen.png-352b33f0ee399e578ac7b51ba6d50444.ctex"]
 
 [params]
 

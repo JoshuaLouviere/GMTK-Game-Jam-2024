@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp2m5oy5axxfk"
-path="res://.godot/imported/GrandmaFallen.png-926551fafef4f80f5bcf3dc5fc012fef.ctex"
+uid="uid://rw7ye2dqage"
+path="res://.godot/imported/BabyTemp.png-17a296ce87ad9d86b16f42b96623cfc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GrandmaFallen.png"
-dest_files=["res://.godot/imported/GrandmaFallen.png-926551fafef4f80f5bcf3dc5fc012fef.ctex"]
+source_file="res://Assets/Images/BabyTemp.png"
+dest_files=["res://.godot/imported/BabyTemp.png-17a296ce87ad9d86b16f42b96623cfc1.ctex"]
 
 [params]
 

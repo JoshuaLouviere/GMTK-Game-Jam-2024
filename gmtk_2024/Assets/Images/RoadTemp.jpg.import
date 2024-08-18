@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2guurfqerrkx"
-path="res://.godot/imported/RoadTemp.jpg-a0810a2d3617320ed7ab2a2df1f32e5a.ctex"
+path="res://.godot/imported/RoadTemp.jpg-16b1169f2565e73f7c4829147c5d54a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/RoadTemp.jpg"
-dest_files=["res://.godot/imported/RoadTemp.jpg-a0810a2d3617320ed7ab2a2df1f32e5a.ctex"]
+source_file="res://Assets/Images/RoadTemp.jpg"
+dest_files=["res://.godot/imported/RoadTemp.jpg-16b1169f2565e73f7c4829147c5d54a1.ctex"]
 
 [params]
 
