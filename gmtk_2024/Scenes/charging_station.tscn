@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://jp1hnlauth11"]
 
 [ext_resource type="Script" path="res://Scripts/charging_station.gd" id="1_4rx4o"]
-[ext_resource type="Texture2D" uid="uid://ctqoov6lo38m0" path="res://Assets/Images/icon.svg" id="2_tmgmb"]
+[ext_resource type="Texture2D" uid="uid://cyxkfglabqx3b" path="res://Assets/Images/ChargerTemp.jpg" id="2_45d3l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w230o"]
 size = Vector2(128.422, 154)
@@ -19,9 +19,9 @@ position = Vector2(-0.105438, -1)
 shape = SubResource("RectangleShape2D_w230o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(543, 0)
-scale = Vector2(9.48437, 1.14063)
-texture = ExtResource("2_tmgmb")
+position = Vector2(543.5, 0)
+scale = Vector2(4.43273, 0.907104)
+texture = ExtResource("2_45d3l")
 
 [connection signal="body_entered" from="Charger" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Charger" to="." method="_on_charger_body_exited"]

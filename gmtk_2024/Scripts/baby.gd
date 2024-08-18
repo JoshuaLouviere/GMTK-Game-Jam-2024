@@ -19,7 +19,7 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	if (body.name == "PlayerCar"):
+	if (body.name == "PlayerCar" && sprite.frame == 0):
 		print("OH NO")
 		road.slowDown()
 		sprite.frame = 1

@@ -8,6 +8,7 @@ extends Node2D
 @onready var obj_spawner = $"../ObjSpawner"
 @onready var battery_control = $"../Battery Control".get_child(0)
 
+var won = false
 var lose = false
 var sTimer = 0
 var sTime = 0.2
@@ -26,22 +27,25 @@ func _process(delta):
 		elif velocity > 0:
 			velocity -= delta * 89
 			
-	elif velocity <= terminalVelocity && lose == false:
+	elif velocity <= terminalVelocity && lose == false && won == false:
 		sTimer -= delta
 		obj_spawner.active = true
 		if (sTimer > 0):
 			velocity -= acceleration * delta
 		else:
 			velocity += acceleration * delta
-	elif lose && velocity > 0:
+	elif lose && velocity > 0 && won == false:
 		velocity -= delta * 550
 		obj_spawner.active = false
 	
 	if (battery_control.value <= 0):
 		lose = true
+		$"../ObjSpawner".active = false
 	
 	if (lose && velocity <= 0):
-		print("you Lose")
+		$"../Transition".go = true
+		$"../Transition".scene = "res://Scenes/lose_scene.tscn"
+		
 	
 	if (velocity <= 0):
 		velocity = 0

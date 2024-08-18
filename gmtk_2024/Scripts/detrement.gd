@@ -17,5 +17,8 @@ func _process(delta):
 	if alpha > 0:
 		rate += accel * delta
 		alpha -= delta * rate
+		
+		if (alpha <= 0):
+			alpha = 0
 	
 	color = Color(col + ("%02x" % alpha))

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dy0orpb4i458m"]
+[gd_scene load_steps=17 format=3 uid="uid://dy0orpb4i458m"]
 
 [ext_resource type="PackedScene" uid="uid://c70lfuowgpsjs" path="res://Scenes/roads.tscn" id="1_2x6it"]
 [ext_resource type="PackedScene" uid="uid://3ylljy7whdnp" path="res://Scenes/obj_spawner.tscn" id="2_dp0fu"]
@@ -10,7 +10,8 @@
 [ext_resource type="Script" path="res://Scripts/jar.gd" id="8_10ucj"]
 [ext_resource type="Script" path="res://Scripts/spedometer.gd" id="9_w6c3b"]
 [ext_resource type="Script" path="res://Scripts/ScreenShaker.gd" id="10_shied"]
-[ext_resource type="Script" path="res://Scenes/detrement.gd" id="11_xhpsx"]
+[ext_resource type="Script" path="res://Scripts/detrement.gd" id="11_xhpsx"]
+[ext_resource type="PackedScene" uid="uid://dn6ja0t1kgqr6" path="res://Scenes/transition.tscn" id="12_6amce"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_joabe"]
 size = Vector2(274.001, 24.4987)
@@ -42,7 +43,7 @@ time = 1.0
 
 [node name="Playercar" parent="GameScene" instance=ExtResource("3_ugf0r")]
 z_index = 365
-position = Vector2(160, 0)
+position = Vector2(266.849, 0)
 
 [node name="GrannyCount" type="Control" parent="GameScene"]
 z_index = 2315
@@ -51,6 +52,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("4_eyqw6")
+goal = 64
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="GameScene/GrannyCount"]
@@ -141,6 +143,8 @@ offset_right = 1145.0
 offset_bottom = -33.0
 color = Color(1, 0, 0.266667, 0.65098)
 script = ExtResource("11_xhpsx")
+
+[node name="Transition" parent="GameScene" instance=ExtResource("12_6amce")]
 
 [node name="UITemp" type="Node2D" parent="."]
 

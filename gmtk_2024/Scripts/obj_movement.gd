@@ -29,7 +29,7 @@ func _process(delta):
 
 # grandma hit
 func _on_area_2d_body_entered(body):
-	if (body.name == "PlayerCar"):
+	if (body.name == "PlayerCar" && sprite.frame == 0):
 		sprite.frame = 1
 		$"../GrannyCount".count += 1
 		createParticle()

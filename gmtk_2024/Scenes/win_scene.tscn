@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://d00pmeuirp1wr"]
+
+[ext_resource type="PackedScene" uid="uid://dn6ja0t1kgqr6" path="res://Scenes/transition.tscn" id="1_oqh0y"]
+[ext_resource type="PackedScene" uid="uid://co1hal00ttdxc" path="res://Scenes/game_button.tscn" id="2_4ihmg"]
+
+[node name="WinScene" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1160.0
+offset_bottom = 662.0
+color = Color(0, 0.458824, 0.847059, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 494.0
+offset_top = 143.0
+offset_right = 901.0
+offset_bottom = 293.0
+text = "You Win"
+
+[node name="Transition" parent="." instance=ExtResource("1_oqh0y")]
+offset_left = -482.082
+offset_top = -379.767
+offset_right = 2491.92
+offset_bottom = 1380.23
+
+[node name="GameButton" parent="." instance=ExtResource("2_4ihmg")]
+offset_left = 449.0
+offset_top = 347.0
+offset_right = 661.0
+offset_bottom = 483.0

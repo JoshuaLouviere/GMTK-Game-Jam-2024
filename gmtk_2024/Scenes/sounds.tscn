@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dso2dk42t0bmh"]
 
-[ext_resource type="Script" path="res://Scenes/sounds.gd" id="1_1dsj3"]
+[ext_resource type="Script" path="res://Scripts/sounds.gd" id="1_1dsj3"]
 [ext_resource type="AudioStream" uid="uid://baew8i1tjpyjp" path="res://Assets/Sounds/GrannyHit0.mp3" id="1_m0awm"]
 [ext_resource type="AudioStream" uid="uid://dtfm02ke8dbdl" path="res://Assets/Sounds/GrannyHit1.mp3" id="2_rm4j1"]
 [ext_resource type="AudioStream" uid="uid://c52oyxmojrnj" path="res://Assets/Sounds/GrannyHit2.mp3" id="4_6loyd"]

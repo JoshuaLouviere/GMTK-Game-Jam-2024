@@ -65,7 +65,7 @@ func _process(delta):
 				var posa = [pos, pos1, pos2]
 				
 				if (chance <= babyChance):
-					var a = rng.randi_range(0, positions.size() - 1)
+					var a = rng.randi_range(0, positions.size() - 2)
 					for i in range(a):
 						spawnBaby(posa[i])
 						

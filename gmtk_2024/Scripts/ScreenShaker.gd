@@ -11,6 +11,9 @@ var speed = 10
 var rng = RandomNumberGenerator.new()
 var reset = true
 
+func _ready():
+	origin = camera.position
+
 func shake(tmes = 8, tim = 0.1, spd = 10, rnge = Vector2(3, 10)):
 	timer = tim
 	time = tim
@@ -38,7 +41,4 @@ func _process(delta):
 				offset.y *= -1
 			times -= 1
 	elif (reset):
-		if (camera.position.distance_to(origin) < 0.1 || camera.position.distance_to(origin) > range.y):
-			reset = false
-			return
 		camera.position -= (camera.position - origin)
