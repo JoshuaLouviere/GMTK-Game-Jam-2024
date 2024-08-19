@@ -14,12 +14,14 @@ grow_vertical = 2
 script = ExtResource("1_qwyv2")
 
 [node name="Transition" parent="." instance=ExtResource("2_txuxf")]
+layout_mode = 0
 offset_left = -482.082
 offset_top = -379.767
 offset_right = 2491.92
 offset_bottom = 1380.23
 
 [node name="GameButton" parent="." instance=ExtResource("3_7wt1g")]
+layout_mode = 0
 offset_left = 487.0
 offset_top = 45.0
 offset_right = 679.0
