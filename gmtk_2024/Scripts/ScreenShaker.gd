@@ -1,6 +1,6 @@
 extends Node2D
 
-var range : Vector2
+var ranges : Vector2
 var offset : Vector2
 var origin : Vector2
 var time = 0.1
@@ -19,7 +19,7 @@ func shake(tmes = 8, tim = 0.1, spd = 10, rnge = Vector2(3, 10)):
 	time = tim
 	times = tmes
 	speed = spd
-	range = rnge
+	ranges = rnge
 	origin = camera.position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,8 +31,8 @@ func _process(delta):
 		
 		if (timer <= 0 && times > 0):
 			timer = time
-			offset.x = rng.randf_range(range.x, range.y)
-			offset.y = rng.randf_range(range.x, range.y)
+			offset.x = rng.randf_range(ranges.x, ranges.y)
+			offset.y = rng.randf_range(ranges.x, ranges.y)
 			var chance = rng.randf() * 100
 			var chance1 = rng.randf() * 100
 			if (chance <= 50):

@@ -16,7 +16,7 @@ func _process(delta):
 	if (road):
 		position.x -= delta * road.velocity / get_parent().scale.x
 	if (charging):
-		battery_control.value += delta * (road.velocity / rate) * 0.5
+		battery_control.value += delta * (road.velocity / rate) #* 0.75
 
 
 func _on_area_2d_body_entered(body):

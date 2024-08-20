@@ -8,7 +8,7 @@ var active = false
 var go = false
 var scene = ""
 
-var max = 255.0
+var maxes = 255.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,7 +27,7 @@ func _process(delta):
 	else:
 		active = true
 	
-	if (alpha < max && go):
+	if (alpha < maxes && go):
 		alpha += delta * rate
 		var a = alpha
 		if (alpha >= 255):
@@ -40,3 +40,8 @@ func _process(delta):
 	
 	
 	
+
+
+func _on_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Main_Menu.tscn")
+	pass # Replace with function body.

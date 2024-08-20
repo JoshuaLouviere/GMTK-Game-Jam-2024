@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bogxq4c7vve84"]
+[gd_scene load_steps=3 format=3 uid="uid://bogxq4c7vve84"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_qwyv2"]
-[ext_resource type="PackedScene" uid="uid://dn6ja0t1kgqr6" path="res://Scenes/transition.tscn" id="2_txuxf"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_qwyv2"]
 [ext_resource type="PackedScene" uid="uid://co1hal00ttdxc" path="res://Scenes/game_button.tscn" id="3_7wt1g"]
 
 [node name="Main_Menu" type="Control"]
@@ -13,28 +12,38 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qwyv2")
 
-[node name="Transition" parent="." instance=ExtResource("2_txuxf")]
-layout_mode = 0
-offset_left = -482.082
-offset_top = -379.767
-offset_right = 2491.92
-offset_bottom = 1380.23
-
 [node name="GameButton" parent="." instance=ExtResource("3_7wt1g")]
-layout_mode = 0
-offset_left = 487.0
-offset_top = 45.0
-offset_right = 679.0
-offset_bottom = 133.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_top = 256.0
+offset_right = 120.0
+offset_bottom = 320.0
+grow_horizontal = 2
 script = null
 
-[node name="Quit" type="Button" parent="."]
+[node name="Credits" type="Button" parent="."]
 layout_mode = 0
-offset_left = 485.0
-offset_top = 385.0
-offset_right = 679.0
-offset_bottom = 474.0
+offset_left = 456.0
+offset_top = 384.0
+offset_right = 696.0
+offset_bottom = 448.0
+text = "Credits"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 456.0
+offset_top = -136.0
+offset_right = 696.0
+offset_bottom = -72.0
+grow_vertical = 0
 text = "Quit"
 
 [connection signal="pressed" from="GameButton" to="." method="_on_game_button_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
